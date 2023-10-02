@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var quickQuizManager = QuickQuizManager()
     var body: some View {
         NavigationView{
             VStack(spacing:40) {
@@ -23,6 +24,7 @@ struct ContentView: View {
                 }
                 NavigationLink{
                   QuickQuizView()
+                        .environmentObject(quickQuizManager)
                 }
             label:{
                 PrimaryButton(text: "Lets Start The Quiz")

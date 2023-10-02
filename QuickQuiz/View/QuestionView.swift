@@ -8,32 +8,40 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @EnvironmentObject var quickQuizManager : QuickQuizManager
     var body: some View {
         VStack(spacing: 40){
             HStack{
                 Text("QuickQuiz")
                     .textModifier()
                 Spacer()
-                Text("1 of 10")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.white)
-                    .background(.gray)
                 
+                Text("\(quickQuizManager.index + 1) out of \(quickQuizManager.length)")
+                    .foregroundColor(Color("AccentColor"))
+                    .fontWeight(.heavy)
             }
-            ProgressBar(progress: 40)
-            VStack(alignment: .leading ,spacing: 20){
-                Text("What is Ron Weasley&#039;s middle name?")
+            
+            ProgressBar(progress: quickQuizManager.progress)
+            
+            VStack(alignment: .leading, spacing: 20) {
+                Text(quickQuizManager.question)
                     .font(.system(size: 20))
                     .bold()
-                    .foregroundColor(.yellow)
+                    .foregroundColor(.black)
                 
-                    AnswerRow(answer: Answer(text: "wowow", isCorrect: false))
-                    AnswerRow(answer: Answer(text: "wowow", isCorrect: true))
-            
-                
+                ForEach(quickQuizManager.answerChoices, id: \.id) { answer in
+                    AnswerRow(answer: answer)
+                        .environmentObject(quickQuizManager)
+                }
             }
-            PrimaryButton(text: "Next")
+            
+            Button {
+                quickQuizManager.goToNextQuestion()
+            } label: {
+                PrimaryButton(text: "Next", background: quickQuizManager.answerSelected ? Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+            }
+            .disabled(!quickQuizManager.answerSelected)
+            
             Spacer()
         }
         .padding()
@@ -45,4 +53,5 @@ struct QuestionView: View {
 
 #Preview {
     QuestionView()
+        .environmentObject(QuickQuizManager())
 }

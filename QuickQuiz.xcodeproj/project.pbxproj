@@ -19,6 +19,7 @@
 		D8DF42BF2ACABD7300DCABD3 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF42BE2ACABD7300DCABD3 /* AnswerRow.swift */; };
 		D8DF42C12ACAE50900DCABD3 /* QuickQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF42C02ACAE50900DCABD3 /* QuickQuizView.swift */; };
 		D8DF42C32ACAE70100DCABD3 /* QuickQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF42C22ACAE70100DCABD3 /* QuickQuiz.swift */; };
+		D8DF42C52ACAEAB100DCABD3 /* QuickQuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF42C42ACAEAB100DCABD3 /* QuickQuizManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D8DF42BE2ACABD7300DCABD3 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 		D8DF42C02ACAE50900DCABD3 /* QuickQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickQuizView.swift; sourceTree = "<group>"; };
 		D8DF42C22ACAE70100DCABD3 /* QuickQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickQuiz.swift; sourceTree = "<group>"; };
+		D8DF42C42ACAEAB100DCABD3 /* QuickQuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickQuizManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				D8DF42A72ACA36F900DCABD3 /* Assets.xcassets */,
 				D8DF42A92ACA36F900DCABD3 /* Preview Content */,
 				D8DF42B52ACAA90B00DCABD3 /* Extensions.swift */,
+				D8DF42C42ACAEAB100DCABD3 /* QuickQuizManager.swift */,
 			);
 			path = QuickQuiz;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				D8DF42BD2ACABC4F00DCABD3 /* Answer.swift in Sources */,
 				D8DF42C32ACAE70100DCABD3 /* QuickQuiz.swift in Sources */,
 				D8DF42A42ACA36F800DCABD3 /* QuickQuizApp.swift in Sources */,
+				D8DF42C52ACAEAB100DCABD3 /* QuickQuizManager.swift in Sources */,
 				D8DF42BA2ACAAD8C00DCABD3 /* ProgressBar.swift in Sources */,
 				D8DF42B62ACAA90B00DCABD3 /* Extensions.swift in Sources */,
 			);
